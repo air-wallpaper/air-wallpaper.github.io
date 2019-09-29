@@ -53,9 +53,9 @@
         <div >
             <img src="./air-wallpaper1.png">
             <div style="color:#465c8b;margin-left: 10px;font-size:18px;">
-                <p style="line-height: 30px">“我的桌面不将就”</p>
-                <div style="line-height: 30px;margin-left:50px">
-                    ——— 空气壁纸
+                <p style="line-height: 30px" id="slogan1">“keep changing”</p>
+                <div style="line-height: 30px;margin-left:50px" id="slogan2">
+                    ---Air Wallpaper
                 </div>  
             </div>
         </div>
@@ -65,7 +65,7 @@
                 <a style="text-decoration: none" target="_blank" href="https://github.com/air-wallpaper/air-wallpaper.github.io/releases/download/0.0.2/air-wallpaper-0.0.2.dmg">
           
                 <div class="download-item" >
-                        下载客户端 macOS-<span style="font-size:12px">v0.0.2</span>
+                        <span id="downloadTip">Download macOS-</span><span style="font-size:12px">v0.0.2</span>
                 </div>
             </a>
         </div>
@@ -79,4 +79,37 @@
     
         </div>
     </body>
+
+    <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  
+    <script type="text/javascript">
+            function  getLang(){
+                var type = navigator.appName;
+        　　if (type == "Netscape"){
+            　　var lang = navigator.language;//获取浏览器配置语言，支持非IE浏览器
+        　　}else{
+            　　var lang = navigator.userLanguage;//获取浏览器配置语言，支持IE5+ == navigator.systemLanguage
+        　　};
+        　　var lang = lang.substr(0, 2);//获取浏览器配置语言前两位
+            return lang;
+    
+            }
+        　　
+        function setFontent(){
+            let lang =  getLang();;
+            console.log(lang);
+            if (lang == "zh"){
+           　  $("#slogan1").text("我的桌面不将就")
+               $("#slogan2").text("--- 空气壁纸")
+               $("#downloadTip").text("下载客户端 macOS-")
+        　　    //window.location.replace('url');//中文编码时打开链接
+        　　}
+        }
+
+        
+        setFontent();
+        </script>
 </html>    
