@@ -9,6 +9,11 @@
             /*#465c8b*/
             text-align: center;
         }    
+
+        .lang{
+            text-decoration: none;
+        }
+
         .download-img{
             display:inline-block;
             vertical-align: center;
@@ -53,9 +58,11 @@
         <div >
             <img src="./air-wallpaper1.png">
             <div style="color:#465c8b;margin-left: 10px;font-size:18px;">
-                <p style="line-height: 30px" id="slogan1">“keep changing”</p>
+                <p style="font-size:18px;" id="desc" >Wallpaper App for macOS.</p>
+                <br>
+                <p style="line-height: 30px" id="slogan1">"keep changing</p>
                 <div style="line-height: 30px;margin-left:50px" id="slogan2">
-                    ---Air Wallpaper
+                    ---Air Wallpaper"
                 </div>  
             </div>
         </div>
@@ -78,6 +85,11 @@
     </div>
     
         </div>
+
+        <div style="height:40px;position:absolute;bottom:10px;padding-left:50px">
+            <a class="lang" href="index.html?lang=zh">中文</a> |
+            <a class="lang" href="index.html?lang=en">english</a>
+        </div>
     </body>
 
     <script
@@ -86,16 +98,34 @@
   crossorigin="anonymous"></script>
   
     <script type="text/javascript">
+
+            function getQueryString(name) {
+                var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) {
+                    return unescape(r[2]);
+                }
+                return null;
+            }
+
+
             function  getLang(){
                 var type = navigator.appName;
-        　　if (type == "Netscape"){
-            　　var lang = navigator.language;//获取浏览器配置语言，支持非IE浏览器
-        　　}else{
-            　　var lang = navigator.userLanguage;//获取浏览器配置语言，支持IE5+ == navigator.systemLanguage
-        　　};
-        　　var lang = lang.substr(0, 2);//获取浏览器配置语言前两位
-            return lang;
-    
+            　　if (type == "Netscape"){
+                　　var lang = navigator.language;//获取浏览器配置语言，支持非IE浏览器
+            　　}else{
+                　　var lang = navigator.userLanguage;//获取浏览器配置语言，支持IE5+ == navigator.systemLanguage
+            　　};
+            　　var lang = lang.substr(0, 2);//获取浏览器配置语言前两位
+
+               langQ = getQueryString("lang");
+
+               if(langQ){
+                   return langQ;
+               }
+
+               return lang;
+        
             }
         　　
         function setFontent(){
@@ -106,6 +136,8 @@
                $("#slogan2").text("--- 空气壁纸")
                $("#downloadTip").text("下载客户端 macOS-")
                $("#demopic").attr("src","./images/show1.jpg")
+               $("#desc").text("为 Mac 设计的壁纸应用");
+               
         　　    //window.location.replace('url');//中文编码时打开链接
         　　}
         }
