@@ -1,6 +1,5 @@
 {
     "version":"0.05",
-    "url":"http://adasdf.aaa"
-
-    
+    "url":"http://adasdf.aaa",
+    "reportHost":"http://localhost:3300"
 }
