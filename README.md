@@ -3,10 +3,8 @@
 2. It provides a wide variety of wallpapers such as flowers, landscapes, animals, the sea, etc.
 3. Automatic switching to keep your desktop up to date.
 
-![img](https://air-wallpaper.github.io/images/show_en_2.jpg)
 
-
-[![](http://img.youtube.com/vi/_bz3EtylV1k/0.jpg)](http://www.youtube.com/watch?v=_bz3EtylV1k "wallpaper app for macos")
+[![](https://air-wallpaper.github.io/images/show_en_2.jpg)](http://www.youtube.com/watch?v=_bz3EtylV1k "wallpaper app for macos")
 
 
 ### Home page: 
