@@ -20,6 +20,16 @@
     "seq": 10
   },
   {
+    "id": 12,
+    "name": "草原",
+    "name_en": "grassland",
+    "desc": null,
+    "desc_en": null,
+    "created_at": "2019-09-17 00:00:00 UTC",
+    "updated_at": "2019-09-17 00:00:00 UTC",
+    "seq": 11
+  },
+  {
     "id": 8,
     "name": "春天",
     "name_en": "spring",
